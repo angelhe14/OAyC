@@ -1,0 +1,19 @@
+|practica2_vhdl
+E2 => EST.OUTPUTSELECT
+E2 => Mux1.IN2
+E2 => EST.DATAA
+E1 => EST.OUTPUTSELECT
+E1 => Mux1.IN3
+E1 => EST.DATAA
+CLK => EST[0].CLK
+CLK => EST[1].CLK
+CLK => S0~reg0.CLK
+CLK => S1~reg0.CLK
+CLK => EstPre[0]~reg0.CLK
+CLK => EstPre[1]~reg0.CLK
+S1 <= S1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+S0 <= S0~reg0.DB_MAX_OUTPUT_PORT_TYPE
+EstPre[0] <= EstPre[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+EstPre[1] <= EstPre[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

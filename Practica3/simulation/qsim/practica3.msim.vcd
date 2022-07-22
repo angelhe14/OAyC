@@ -1,0 +1,522 @@
+$comment
+	File created using the following command:
+		vcd file practica3.msim.vcd -direction
+$end
+$date
+	Thu Mar 10 22:04:08 2022
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module practica3_vhd_vec_tst $end
+$var wire 1 ! clk $end
+$var wire 1 " edoPres [2] $end
+$var wire 1 # edoPres [1] $end
+$var wire 1 $ edoPres [0] $end
+$var wire 1 % entradaA [3] $end
+$var wire 1 & entradaA [2] $end
+$var wire 1 ' entradaA [1] $end
+$var wire 1 ( entradaA [0] $end
+$var wire 1 ) liga [2] $end
+$var wire 1 * liga [1] $end
+$var wire 1 + liga [0] $end
+$var wire 1 , reset $end
+$var wire 1 - salidas [3] $end
+$var wire 1 . salidas [2] $end
+$var wire 1 / salidas [1] $end
+$var wire 1 0 salidas [0] $end
+
+$scope module i1 $end
+$var wire 1 1 gnd $end
+$var wire 1 2 vcc $end
+$var wire 1 3 unknown $end
+$var wire 1 4 devoe $end
+$var wire 1 5 devclrn $end
+$var wire 1 6 devpor $end
+$var wire 1 7 ww_devoe $end
+$var wire 1 8 ww_devclrn $end
+$var wire 1 9 ww_devpor $end
+$var wire 1 : ww_edoPres [2] $end
+$var wire 1 ; ww_edoPres [1] $end
+$var wire 1 < ww_edoPres [0] $end
+$var wire 1 = ww_clk $end
+$var wire 1 > ww_reset $end
+$var wire 1 ? ww_entradaA [3] $end
+$var wire 1 @ ww_entradaA [2] $end
+$var wire 1 A ww_entradaA [1] $end
+$var wire 1 B ww_entradaA [0] $end
+$var wire 1 C ww_liga [2] $end
+$var wire 1 D ww_liga [1] $end
+$var wire 1 E ww_liga [0] $end
+$var wire 1 F ww_salidas [3] $end
+$var wire 1 G ww_salidas [2] $end
+$var wire 1 H ww_salidas [1] $end
+$var wire 1 I ww_salidas [0] $end
+$var wire 1 J \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [4] $end
+$var wire 1 K \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [3] $end
+$var wire 1 L \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [2] $end
+$var wire 1 M \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [1] $end
+$var wire 1 N \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [0] $end
+$var wire 1 O \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [4] $end
+$var wire 1 P \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [3] $end
+$var wire 1 Q \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [2] $end
+$var wire 1 R \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [1] $end
+$var wire 1 S \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [0] $end
+$var wire 1 T \reset~inputclkctrl_INCLK_bus\ [3] $end
+$var wire 1 U \reset~inputclkctrl_INCLK_bus\ [2] $end
+$var wire 1 V \reset~inputclkctrl_INCLK_bus\ [1] $end
+$var wire 1 W \reset~inputclkctrl_INCLK_bus\ [0] $end
+$var wire 1 X \clk~inputclkctrl_INCLK_bus\ [3] $end
+$var wire 1 Y \clk~inputclkctrl_INCLK_bus\ [2] $end
+$var wire 1 Z \clk~inputclkctrl_INCLK_bus\ [1] $end
+$var wire 1 [ \clk~inputclkctrl_INCLK_bus\ [0] $end
+$var wire 1 \ \~QUARTUS_CREATED_GND~I_combout\ $end
+$var wire 1 ] \~QUARTUS_CREATED_UNVM~~busy\ $end
+$var wire 1 ^ \~QUARTUS_CREATED_ADC1~~eoc\ $end
+$var wire 1 _ \~QUARTUS_CREATED_ADC2~~eoc\ $end
+$var wire 1 ` \edoPres[2]~output_o\ $end
+$var wire 1 a \edoPres[1]~output_o\ $end
+$var wire 1 b \edoPres[0]~output_o\ $end
+$var wire 1 c \liga[2]~output_o\ $end
+$var wire 1 d \liga[1]~output_o\ $end
+$var wire 1 e \liga[0]~output_o\ $end
+$var wire 1 f \salidas[3]~output_o\ $end
+$var wire 1 g \salidas[2]~output_o\ $end
+$var wire 1 h \salidas[1]~output_o\ $end
+$var wire 1 i \salidas[0]~output_o\ $end
+$var wire 1 j \clk~input_o\ $end
+$var wire 1 k \clk~inputclkctrl_outclk\ $end
+$var wire 1 l \entradaA[2]~input_o\ $end
+$var wire 1 m \entradaA[3]~input_o\ $end
+$var wire 1 n \entradaA[0]~input_o\ $end
+$var wire 1 o \entradaA[1]~input_o\ $end
+$var wire 1 p \inst3|Mux0~0_combout\ $end
+$var wire 1 q \reset~input_o\ $end
+$var wire 1 r \reset~inputclkctrl_outclk\ $end
+$var wire 1 s \inst3|Mux1~0_combout\ $end
+$var wire 1 t \inst3|Mux2~0_combout\ $end
+$var wire 1 u \inst|internal_value[0]~0_combout\ $end
+$var wire 1 v \inst3|Mux3~0_combout\ $end
+$var wire 1 w \inst3|Mux4~0_combout\ $end
+$var wire 1 x \inst3|Mux5~0_combout\ $end
+$var wire 1 y \inst3|Mux6~0_combout\ $end
+$var wire 1 z \inst|internal_value\ [2] $end
+$var wire 1 { \inst|internal_value\ [1] $end
+$var wire 1 | \inst|internal_value\ [0] $end
+$var wire 1 } \inst3|ALT_INV_Mux5~0_combout\ $end
+$var wire 1 ~ \inst3|ALT_INV_Mux2~0_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1,
+01
+12
+x3
+14
+15
+16
+17
+18
+19
+0=
+1>
+0\
+z]
+z^
+z_
+0`
+0a
+0b
+0c
+0d
+1e
+0f
+0g
+1h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+1q
+1r
+0s
+0t
+1u
+0v
+0w
+0x
+0y
+1}
+1~
+0%
+0&
+0'
+0(
+0:
+0;
+0<
+0?
+0@
+0A
+0B
+0C
+0D
+1E
+0F
+0G
+1H
+0I
+0z
+0{
+0|
+1X
+1Y
+1Z
+0[
+1T
+1U
+1V
+1W
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0"
+0#
+0$
+0)
+0*
+1+
+0-
+0.
+1/
+00
+$end
+#50000
+1!
+1=
+1j
+1[
+1k
+1|
+1b
+1<
+1$
+#100000
+0!
+1(
+0=
+1B
+1n
+0j
+0[
+1t
+1x
+0}
+0~
+0u
+0e
+0h
+0k
+0E
+0H
+0+
+0/
+#150000
+1!
+1=
+1j
+1[
+1k
+0|
+0b
+0<
+0$
+#200000
+0!
+0(
+1'
+0=
+0B
+1A
+1o
+0n
+0j
+0[
+1s
+1w
+1g
+1d
+0k
+1G
+1D
+1.
+1*
+#250000
+1!
+1=
+1j
+1[
+1k
+1{
+1a
+1;
+1#
+#300000
+0!
+1(
+0=
+1B
+1n
+0j
+0[
+0t
+1v
+0w
+1y
+1~
+1i
+0g
+1f
+1u
+1e
+0k
+1I
+0G
+1F
+1E
+10
+0.
+1-
+1+
+#350000
+1!
+1=
+1j
+1[
+1k
+1|
+1b
+1<
+1$
+#400000
+0!
+0(
+0'
+1&
+0=
+0B
+0A
+1@
+1l
+0o
+0n
+0j
+0[
+1t
+0v
+0x
+1}
+0~
+0f
+0u
+0e
+1h
+0k
+0F
+0E
+1H
+0-
+0+
+1/
+#450000
+1!
+1=
+1j
+1[
+1k
+0|
+0b
+0<
+0$
+#500000
+0!
+1(
+0=
+1B
+1n
+0j
+0[
+0t
+0y
+1~
+0i
+1u
+1e
+0k
+0I
+1E
+00
+1+
+#550000
+1!
+1=
+1j
+1[
+1k
+1|
+1b
+1<
+1$
+#600000
+0!
+0(
+1'
+0=
+0B
+1A
+1o
+0n
+0j
+0[
+1p
+0s
+1t
+0~
+0d
+1c
+0u
+0e
+0k
+0D
+1C
+0E
+0*
+1)
+0+
+#650000
+1!
+1=
+1j
+1[
+1k
+1z
+0{
+0|
+0b
+0a
+1`
+0<
+0;
+1:
+0$
+0#
+1"
+#700000
+0!
+1(
+0=
+1B
+1n
+0j
+0[
+1x
+0}
+0h
+0k
+0H
+0/
+#750000
+1!
+1=
+1j
+1[
+1k
+#800000
+0!
+0(
+0'
+0&
+1%
+0=
+0B
+0A
+0@
+1?
+1m
+0l
+0o
+0n
+0j
+0[
+0t
+1~
+1u
+1e
+0k
+1E
+1+
+#850000
+1!
+1=
+1j
+1[
+1k
+1|
+1b
+1<
+1$
+#900000
+0!
+1(
+0,
+0=
+1B
+0>
+0q
+1n
+0j
+0W
+0[
+0p
+1w
+1g
+0c
+0k
+0r
+1G
+0C
+1.
+0)
+0z
+0|
+0b
+0`
+0<
+0:
+0$
+0"
+#950000
+1!
+1=
+1j
+1[
+1k
+#1000000

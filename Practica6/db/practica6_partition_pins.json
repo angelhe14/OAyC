@@ -1,0 +1,101 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Estado[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Estado[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Estado[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Estado[0]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[5]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[4]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[3]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[2]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[1]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[0]",
+					"strict" : false
+				},
+				{
+					"name" : "X",
+					"strict" : false
+				},
+				{
+					"name" : "Y",
+					"strict" : false
+				},
+				{
+					"name" : "INT",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADA_Transformacion[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADA_Interrupciones[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADA_Transformacion[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADA_Interrupciones[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADA_Transformacion[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADA_Interrupciones[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADA_Transformacion[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADA_Interrupciones[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reloj",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,73 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "edoPres[2]",
+					"strict" : false
+				},
+				{
+					"name" : "edoPres[1]",
+					"strict" : false
+				},
+				{
+					"name" : "edoPres[0]",
+					"strict" : false
+				},
+				{
+					"name" : "liga[2]",
+					"strict" : false
+				},
+				{
+					"name" : "liga[1]",
+					"strict" : false
+				},
+				{
+					"name" : "liga[0]",
+					"strict" : false
+				},
+				{
+					"name" : "salidas[3]",
+					"strict" : false
+				},
+				{
+					"name" : "salidas[2]",
+					"strict" : false
+				},
+				{
+					"name" : "salidas[1]",
+					"strict" : false
+				},
+				{
+					"name" : "salidas[0]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

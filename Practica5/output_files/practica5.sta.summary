@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -2.168
+TNS   : -35.698
+
+Type  : Slow 1200mV 85C Model Setup 'div_frec:inst12|cuenta[25]'
+Slack : -1.214
+TNS   : -3.627
+
+Type  : Slow 1200mV 85C Model Hold 'div_frec:inst12|cuenta[25]'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : 0.485
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -39.478
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'div_frec:inst12|cuenta[25]'
+Slack : -1.403
+TNS   : -4.209
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -1.843
+TNS   : -29.576
+
+Type  : Slow 1200mV 0C Model Setup 'div_frec:inst12|cuenta[25]'
+Slack : -1.021
+TNS   : -3.061
+
+Type  : Slow 1200mV 0C Model Hold 'div_frec:inst12|cuenta[25]'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 0.441
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -39.478
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'div_frec:inst12|cuenta[25]'
+Slack : -1.403
+TNS   : -4.209
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -0.688
+TNS   : -1.305
+
+Type  : Fast 1200mV 0C Model Setup 'div_frec:inst12|cuenta[25]'
+Slack : 0.092
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'div_frec:inst12|cuenta[25]'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : 0.168
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -30.014
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'div_frec:inst12|cuenta[25]'
+Slack : -1.000
+TNS   : -3.000
+
+------------------------------------------------------------

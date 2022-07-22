@@ -1,0 +1,418 @@
+|practica6
+Estado[0] <= secuenciador:instsec.Y[0]
+Estado[1] <= secuenciador:instsec.Y[1]
+Estado[2] <= secuenciador:instsec.Y[2]
+Estado[3] <= secuenciador:instsec.Y[3]
+X => mux4:inst2sel.E0
+Y => mux4:inst2sel.E1
+INT => mux4:inst2sel.E2
+reloj => div_frec:inst10.clk
+reset => registro_2:inst5.reset
+reset => registro_4:inst8reg4.reset
+reset => secuenciador:instsec.reset
+reset => registro_1:inst1.reset
+reset => registro_1:inst3.reset
+reset => registro_1:inst2.reset
+reset => registro_2:inst4.reset
+reset => registro_3:inst9.reset
+ENTRADA_Transformacion[0] => registro_1:inst1.entrada[0]
+ENTRADA_Transformacion[1] => registro_1:inst1.entrada[1]
+ENTRADA_Transformacion[2] => registro_1:inst1.entrada[2]
+ENTRADA_Transformacion[3] => registro_1:inst1.entrada[3]
+ENTRADA_Interrupciones[0] => registro_1:inst2.entrada[0]
+ENTRADA_Interrupciones[1] => registro_1:inst2.entrada[1]
+ENTRADA_Interrupciones[2] => registro_1:inst2.entrada[2]
+ENTRADA_Interrupciones[3] => registro_1:inst2.entrada[3]
+salida[0] <= registro_3:inst9.salida[0]
+salida[1] <= registro_3:inst9.salida[1]
+salida[2] <= registro_3:inst9.salida[2]
+salida[3] <= registro_3:inst9.salida[3]
+salida[4] <= registro_3:inst9.salida[4]
+salida[5] <= registro_3:inst9.salida[5]
+
+
+|practica6|secuenciador:instsec
+nPL <= logica_interna:inst3.nPL
+nCC => logica_interna:inst3.nCC
+instruccion[0] => logica_interna:inst3.instruccion[0]
+instruccion[1] => logica_interna:inst3.instruccion[1]
+nMAP <= logica_interna:inst3.nMAP
+nVECT <= logica_interna:inst3.nVECT
+Y[0] <= mux_direccionamiento:inst5.salida[0]
+Y[1] <= mux_direccionamiento:inst5.salida[1]
+Y[2] <= mux_direccionamiento:inst5.salida[2]
+Y[3] <= mux_direccionamiento:inst5.salida[3]
+reloj => registro_1:inst.reloj
+reset => registro_1:inst.reset
+ena => registro_1:inst.ena
+D[0] => mux_direccionamiento:inst5.E1[0]
+D[1] => mux_direccionamiento:inst5.E1[1]
+D[2] => mux_direccionamiento:inst5.E1[2]
+D[3] => mux_direccionamiento:inst5.E1[3]
+
+
+|practica6|secuenciador:instsec|logica_interna:inst3
+instruccion[0] => Equal0.IN1
+instruccion[0] => Equal1.IN1
+instruccion[0] => Equal2.IN0
+instruccion[0] => Equal3.IN1
+instruccion[1] => Equal0.IN0
+instruccion[1] => Equal1.IN0
+instruccion[1] => Equal2.IN1
+instruccion[1] => Equal3.IN0
+nCC => selector.DATAA
+nCC => selector.DATAB
+selector <= selector$latch.DB_MAX_OUTPUT_PORT_TYPE
+nPL <= nPL$latch.DB_MAX_OUTPUT_PORT_TYPE
+nMAP <= nMAP$latch.DB_MAX_OUTPUT_PORT_TYPE
+nVECT <= nVECT$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica6|secuenciador:instsec|mux_direccionamiento:inst5
+seleccion => salida[0].OUTPUTSELECT
+seleccion => salida[1].OUTPUTSELECT
+seleccion => salida[2].OUTPUTSELECT
+seleccion => salida[3].OUTPUTSELECT
+E0[0] => salida[0].DATAB
+E0[1] => salida[1].DATAB
+E0[2] => salida[2].DATAB
+E0[3] => salida[3].DATAB
+E1[0] => salida[0].DATAA
+E1[1] => salida[1].DATAA
+E1[2] => salida[2].DATAA
+E1[3] => salida[3].DATAA
+salida[0] <= salida[0].DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= salida[1].DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= salida[2].DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= salida[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica6|secuenciador:instsec|registro_1:inst
+reloj => valor_interno[0].CLK
+reloj => valor_interno[1].CLK
+reloj => valor_interno[2].CLK
+reloj => valor_interno[3].CLK
+reset => valor_interno[0].ACLR
+reset => valor_interno[1].ACLR
+reset => valor_interno[2].ACLR
+reset => valor_interno[3].ACLR
+ena => salida[3].OE
+ena => salida[2].OE
+ena => salida[1].OE
+ena => salida[0].OE
+entrada[0] => valor_interno[0].DATAIN
+entrada[1] => valor_interno[1].DATAIN
+entrada[2] => valor_interno[2].DATAIN
+entrada[3] => valor_interno[3].DATAIN
+salida[0] <= salida[0].DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= salida[1].DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= salida[2].DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= salida[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica6|secuenciador:instsec|incrementador:inst4
+entrada[0] => Add0.IN8
+entrada[1] => Add0.IN7
+entrada[2] => Add0.IN6
+entrada[3] => Add0.IN5
+salida[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica6|mux4:inst2sel
+sel[0] => Equal0.IN1
+sel[0] => Equal1.IN1
+sel[0] => Equal2.IN0
+sel[0] => Equal3.IN1
+sel[1] => Equal0.IN0
+sel[1] => Equal1.IN0
+sel[1] => Equal2.IN1
+sel[1] => Equal3.IN0
+E0 => O.DATAB
+E1 => O.DATAB
+E2 => O.DATAB
+E3 => O.DATAA
+O <= O$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica6|registro_2:inst5
+reloj => valor_interno[0].CLK
+reloj => valor_interno[1].CLK
+reset => valor_interno[0].ACLR
+reset => valor_interno[1].ACLR
+ena => salida[1].OE
+ena => salida[0].OE
+entrada[0] => valor_interno[0].DATAIN
+entrada[1] => valor_interno[1].DATAIN
+salida[0] <= salida[0].DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= salida[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica6|div_frec:inst10
+clk => cuenta[0].CLK
+clk => cuenta[1].CLK
+clk => cuenta[2].CLK
+clk => cuenta[3].CLK
+clk => cuenta[4].CLK
+clk => cuenta[5].CLK
+clk => cuenta[6].CLK
+clk => cuenta[7].CLK
+clk => cuenta[8].CLK
+clk => cuenta[9].CLK
+clk => cuenta[10].CLK
+clk => cuenta[11].CLK
+clk => cuenta[12].CLK
+clk => cuenta[13].CLK
+clk => cuenta[14].CLK
+clk => cuenta[15].CLK
+clk => cuenta[16].CLK
+clk => cuenta[17].CLK
+clk => cuenta[18].CLK
+clk => cuenta[19].CLK
+clk => cuenta[20].CLK
+clk => cuenta[21].CLK
+clk => cuenta[22].CLK
+clk => cuenta[23].CLK
+clk => cuenta[24].CLK
+clk => cuenta[25].CLK
+clk => cuenta[26].CLK
+clk => cuenta[27].CLK
+div_clk <= cuenta[25].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica6|divisor_datos:inst6
+entrada[0] => salidas[0].DATAIN
+entrada[1] => salidas[1].DATAIN
+entrada[2] => salidas[2].DATAIN
+entrada[3] => salidas[3].DATAIN
+entrada[4] => salidas[4].DATAIN
+entrada[5] => salidas[5].DATAIN
+entrada[6] => MI[0].DATAIN
+entrada[7] => MI[1].DATAIN
+entrada[8] => valorF.DATAIN
+entrada[9] => prueba[0].DATAIN
+entrada[10] => prueba[1].DATAIN
+entrada[11] => liga[0].DATAIN
+entrada[12] => liga[1].DATAIN
+entrada[13] => liga[2].DATAIN
+entrada[14] => liga[3].DATAIN
+prueba[0] <= entrada[9].DB_MAX_OUTPUT_PORT_TYPE
+prueba[1] <= entrada[10].DB_MAX_OUTPUT_PORT_TYPE
+valorF <= entrada[8].DB_MAX_OUTPUT_PORT_TYPE
+MI[0] <= entrada[6].DB_MAX_OUTPUT_PORT_TYPE
+MI[1] <= entrada[7].DB_MAX_OUTPUT_PORT_TYPE
+liga[0] <= entrada[11].DB_MAX_OUTPUT_PORT_TYPE
+liga[1] <= entrada[12].DB_MAX_OUTPUT_PORT_TYPE
+liga[2] <= entrada[13].DB_MAX_OUTPUT_PORT_TYPE
+liga[3] <= entrada[14].DB_MAX_OUTPUT_PORT_TYPE
+salidas[0] <= entrada[0].DB_MAX_OUTPUT_PORT_TYPE
+salidas[1] <= entrada[1].DB_MAX_OUTPUT_PORT_TYPE
+salidas[2] <= entrada[2].DB_MAX_OUTPUT_PORT_TYPE
+salidas[3] <= entrada[3].DB_MAX_OUTPUT_PORT_TYPE
+salidas[4] <= entrada[4].DB_MAX_OUTPUT_PORT_TYPE
+salidas[5] <= entrada[5].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica6|memory:inst14
+dir[0] => Mux0.IN19
+dir[0] => Mux1.IN19
+dir[0] => Mux2.IN19
+dir[0] => Mux3.IN19
+dir[0] => Mux4.IN19
+dir[0] => Mux5.IN19
+dir[0] => Mux6.IN19
+dir[0] => Mux7.IN19
+dir[0] => Mux8.IN19
+dir[0] => Mux9.IN19
+dir[0] => Mux10.IN19
+dir[0] => Mux11.IN19
+dir[0] => Mux12.IN19
+dir[0] => Mux13.IN19
+dir[0] => Mux14.IN19
+dir[1] => Mux0.IN18
+dir[1] => Mux1.IN18
+dir[1] => Mux2.IN18
+dir[1] => Mux3.IN18
+dir[1] => Mux4.IN18
+dir[1] => Mux5.IN18
+dir[1] => Mux6.IN18
+dir[1] => Mux7.IN18
+dir[1] => Mux8.IN18
+dir[1] => Mux9.IN18
+dir[1] => Mux10.IN18
+dir[1] => Mux11.IN18
+dir[1] => Mux12.IN18
+dir[1] => Mux13.IN18
+dir[1] => Mux14.IN18
+dir[2] => Mux0.IN17
+dir[2] => Mux1.IN17
+dir[2] => Mux2.IN17
+dir[2] => Mux3.IN17
+dir[2] => Mux4.IN17
+dir[2] => Mux5.IN17
+dir[2] => Mux6.IN17
+dir[2] => Mux7.IN17
+dir[2] => Mux8.IN17
+dir[2] => Mux9.IN17
+dir[2] => Mux10.IN17
+dir[2] => Mux11.IN17
+dir[2] => Mux12.IN17
+dir[2] => Mux13.IN17
+dir[2] => Mux14.IN17
+dir[3] => Mux0.IN16
+dir[3] => Mux1.IN16
+dir[3] => Mux2.IN16
+dir[3] => Mux3.IN16
+dir[3] => Mux4.IN16
+dir[3] => Mux5.IN16
+dir[3] => Mux6.IN16
+dir[3] => Mux7.IN16
+dir[3] => Mux8.IN16
+dir[3] => Mux9.IN16
+dir[3] => Mux10.IN16
+dir[3] => Mux11.IN16
+dir[3] => Mux12.IN16
+dir[3] => Mux13.IN16
+dir[3] => Mux14.IN16
+data[0] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+data[3] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+data[4] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+data[5] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+data[6] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+data[7] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+data[8] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+data[9] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+data[10] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+data[11] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+data[12] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+data[13] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+data[14] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica6|registro_4:inst8reg4
+reloj => valor_interno.CLK
+reset => valor_interno.ACLR
+ena => salida.OE
+entrada => valor_interno.DATAIN
+salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica6|registro_1:inst1
+reloj => valor_interno[0].CLK
+reloj => valor_interno[1].CLK
+reloj => valor_interno[2].CLK
+reloj => valor_interno[3].CLK
+reset => valor_interno[0].ACLR
+reset => valor_interno[1].ACLR
+reset => valor_interno[2].ACLR
+reset => valor_interno[3].ACLR
+ena => salida[3].OE
+ena => salida[2].OE
+ena => salida[1].OE
+ena => salida[0].OE
+entrada[0] => valor_interno[0].DATAIN
+entrada[1] => valor_interno[1].DATAIN
+entrada[2] => valor_interno[2].DATAIN
+entrada[3] => valor_interno[3].DATAIN
+salida[0] <= salida[0].DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= salida[1].DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= salida[2].DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= salida[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica6|registro_1:inst3
+reloj => valor_interno[0].CLK
+reloj => valor_interno[1].CLK
+reloj => valor_interno[2].CLK
+reloj => valor_interno[3].CLK
+reset => valor_interno[0].ACLR
+reset => valor_interno[1].ACLR
+reset => valor_interno[2].ACLR
+reset => valor_interno[3].ACLR
+ena => salida[3].OE
+ena => salida[2].OE
+ena => salida[1].OE
+ena => salida[0].OE
+entrada[0] => valor_interno[0].DATAIN
+entrada[1] => valor_interno[1].DATAIN
+entrada[2] => valor_interno[2].DATAIN
+entrada[3] => valor_interno[3].DATAIN
+salida[0] <= salida[0].DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= salida[1].DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= salida[2].DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= salida[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica6|registro_1:inst2
+reloj => valor_interno[0].CLK
+reloj => valor_interno[1].CLK
+reloj => valor_interno[2].CLK
+reloj => valor_interno[3].CLK
+reset => valor_interno[0].ACLR
+reset => valor_interno[1].ACLR
+reset => valor_interno[2].ACLR
+reset => valor_interno[3].ACLR
+ena => salida[3].OE
+ena => salida[2].OE
+ena => salida[1].OE
+ena => salida[0].OE
+entrada[0] => valor_interno[0].DATAIN
+entrada[1] => valor_interno[1].DATAIN
+entrada[2] => valor_interno[2].DATAIN
+entrada[3] => valor_interno[3].DATAIN
+salida[0] <= salida[0].DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= salida[1].DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= salida[2].DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= salida[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica6|registro_2:inst4
+reloj => valor_interno[0].CLK
+reloj => valor_interno[1].CLK
+reset => valor_interno[0].ACLR
+reset => valor_interno[1].ACLR
+ena => salida[1].OE
+ena => salida[0].OE
+entrada[0] => valor_interno[0].DATAIN
+entrada[1] => valor_interno[1].DATAIN
+salida[0] <= salida[0].DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= salida[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica6|registro_3:inst9
+reloj => valor_interno[0].CLK
+reloj => valor_interno[1].CLK
+reloj => valor_interno[2].CLK
+reloj => valor_interno[3].CLK
+reloj => valor_interno[4].CLK
+reloj => valor_interno[5].CLK
+reset => valor_interno[0].ACLR
+reset => valor_interno[1].ACLR
+reset => valor_interno[2].ACLR
+reset => valor_interno[3].ACLR
+reset => valor_interno[4].ACLR
+reset => valor_interno[5].ACLR
+ena => salida[5].OE
+ena => salida[4].OE
+ena => salida[3].OE
+ena => salida[2].OE
+ena => salida[1].OE
+ena => salida[0].OE
+entrada[0] => valor_interno[0].DATAIN
+entrada[1] => valor_interno[1].DATAIN
+entrada[2] => valor_interno[2].DATAIN
+entrada[3] => valor_interno[3].DATAIN
+entrada[4] => valor_interno[4].DATAIN
+entrada[5] => valor_interno[5].DATAIN
+salida[0] <= salida[0].DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= salida[1].DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= salida[2].DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= salida[3].DB_MAX_OUTPUT_PORT_TYPE
+salida[4] <= salida[4].DB_MAX_OUTPUT_PORT_TYPE
+salida[5] <= salida[5].DB_MAX_OUTPUT_PORT_TYPE
+
+
